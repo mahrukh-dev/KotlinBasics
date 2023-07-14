@@ -25,9 +25,19 @@ Kotlin Basics
    - passing parameter in a function
    - when passed a parameter in a function it is passed as value
    - function with return value
+   - function can return array
+   - unit is the data type that returns nothing
+   - single expression functions
+   - function overloading - when two functions have same name so compiler chooses accordingly
+   - default arguments - specify type explicitly e.g fun func(reps: Int = 1){}
+   - named arguments - e.g func(reps = 5)
+   - optional parameters
+   - pass array as a parameter using spread operator
 - Variables
   - var is used when variable value can be changed
   - val is used for constant values
+  - const val 
+  - global variables - must initialize
 - Data Types
   - Byte - 8 bit
   - Short - 16 bit
@@ -35,6 +45,7 @@ Kotlin Basics
   - Long - 64 bit
   - Float - 32 bit
   - Double - 64 bit
+  - Unit - represents nothing
 - Operators
 - Kotlin Repel for testing
   - Tools -> Kotlin -> KotlinRepel
@@ -51,6 +62,9 @@ Kotlin Basics
   - array.indices --> gives list of all indices
   - array[index].length --> length of array
   - array.last() --> last element of array
+- String Functions
+  - string.trim() --> removes extra white spaces
+  - string.isBlank() --> tells if the string is empty
 - Loops
   - For Loop
   - While Loop
@@ -59,5 +73,10 @@ Kotlin Basics
   - continue statement
 - IF statement
 - WHEN statement
-- 
+- OOP Concepts
+  - instantiation
+  - passing argument in class
+  - constructor
+  - init block
+  - this keyword
 

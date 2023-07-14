@@ -1,3 +1,5 @@
+const val STRING_CONST = "Mah Rukh - Summer Intern - Stella Technology"
+
 fun main() {
 
     var userName: String = "Mah Rukh"
@@ -185,6 +187,23 @@ println()
     println( getMax(4, 3))
     println( getMax(4.5, 3.2))
 
+    //PART TWENTY
+    println(getSum(3,4))
+    println(getSum(3,4, 5))
+    println(getSum(3,4, 5, 6))
+    val nArray = intArrayOf(1,2,3,4,10,100)
+    println( getSum2(1,5,6,4,4))
+
+    //passing array as argument
+    println(getSum2(*nArray))
+
+    //PART TWENTY_TWO
+    val user = User("  Mah     ", 20) //instantiation
+    println("username: ${user.name}")
+    println("userage: ${user.age}")
+
+    user.age = 30
+
 }
 
 fun sayHello(): Unit{
@@ -203,5 +222,33 @@ fun getMaxVal(num1: Int, num2: Int): Int {
 
 fun double(number: Int): Int = number * 2
 
+
 fun getMax(a: Int, b: Int): Int = if (a>b) a else b
 fun getMax(a: Double, b: Double): Double = if (a>b) a else b
+
+fun getSum(a: Int, b: Int, c: Int = 0, d: Int = 0): Int{
+    var sum = a + b + c + d
+    return sum
+}
+
+fun getSum2(vararg numbers: Int):Int {
+    var sum = 0
+    //numbers -- IntArray
+    for(i in numbers){
+        sum = sum + i
+    }
+    return sum
+}
+
+class User(var name: String = "No Name", age: Int) {
+    var age = age //can change
+
+    init{
+        if (name.isBlank()){
+            name = "No Name"
+        }
+        else {
+            name = name.trim()
+        }
+    }
+}
