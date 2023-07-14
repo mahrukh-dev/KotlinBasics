@@ -171,15 +171,37 @@ println()
 
     //PART FIFTEEN
     var name = "Hasham"
-    greet(name)
-    
+    greeting(name)
+
+    //PART SIXTEEN
+    val max = getMaxVal(12, 2)
+    println("max = ${max}")
+
+    //PART SEVENTEEN
+    println("double = ${double(4)}")
+
+    //PART EIGHTEEN
+    //function overloading
+    println( getMax(4, 3))
+    println( getMax(4.5, 3.2))
+
 }
 
-fun sayHello(){
+fun sayHello(): Unit{
     println("Hello, Stella Tech")
 }
 
 //PART FIFTEEN
-fun greet(name: String){
+fun greeting(name: String){
     println("Hello $name, nice to meet you")
 }
+
+fun getMaxVal(num1: Int, num2: Int): Int {
+    val max = if (num1>num2) num1 else num2
+    return max
+}
+
+fun double(number: Int): Int = number * 2
+
+fun getMax(a: Int, b: Int): Int = if (a>b) a else b
+fun getMax(a: Double, b: Double): Double = if (a>b) a else b
