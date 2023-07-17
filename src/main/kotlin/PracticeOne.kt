@@ -1,6 +1,6 @@
 const val STRING_CONST = "Mah Rukh - Summer Intern - Stella Technology"
 
-fun PracticeOne() {
+fun main() {
 
     var userName: String = "Mah Rukh"
     userName = "Arsh"
