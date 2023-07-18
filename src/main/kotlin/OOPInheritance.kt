@@ -21,7 +21,7 @@ fun main(){
 open class Animal{
     var color: String = ""
 
-    fun eat(){
+    open fun eat(){
         println("Eat")
     }
 }
@@ -34,6 +34,12 @@ class Dog : Animal() {
         println("Bark")
     }
 
+    //override
+    override fun eat(){
+        super<Animal>.eat()
+        println("The dog is eating")
+    }
+
 }
 
 class Cat : Animal(){
@@ -41,6 +47,11 @@ class Cat : Animal(){
 
     fun meow(){
         println("Meow")
+    }
+
+    //override
+    override fun eat(){
+        println("The cat is eating")
     }
 
 }
