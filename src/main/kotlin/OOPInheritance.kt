@@ -19,7 +19,7 @@ fun main(){
 }
 
 open class Animal{
-    var color: String = ""
+    open var color: String = "White"
 
     open fun eat(){
         println("Eat")
@@ -29,6 +29,7 @@ open class Animal{
 class Dog : Animal() {
 
     var breed: String = ""
+    override var color: String = "black"
 
     fun bark(){
         println("Bark")
