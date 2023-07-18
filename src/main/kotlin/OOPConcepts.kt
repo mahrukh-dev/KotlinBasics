@@ -14,4 +14,5 @@ fun personClassWorking(){
 
 fun CustomerClassWorking(){
     var customer = Customer("Arsh")
+    var customerOne = Customer("new", 10)
 }
