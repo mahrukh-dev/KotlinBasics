@@ -28,6 +28,13 @@ fun main(){
     var s3 = "Hey"
     println("Extension Function: ${s3.add(s1,s2)}")
 
+    //calling infix function
+    val x =10
+    val y = 15
+    val greaterValue = x.greaterVal(y)
+    val greaterValueTwo = x greaterVal y //add spaces when infix function used
+
+
 }
 
 fun funcOne(){
@@ -76,3 +83,12 @@ fun String.add(str1: String, str2: String): String{
     return this + str1 + str2
 }
 
+//infix function --> have only one parameter
+infix fun Int.greaterVal(other:Int):Int{
+    if (this>other){
+        return this
+    }
+    else{
+        return other
+    }
+}
