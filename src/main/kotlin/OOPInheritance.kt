@@ -26,7 +26,7 @@ open class Animal{
     }
 }
 
-class Dog : Animal() {
+class Dog() : Animal() {
 
     var breed: String = ""
     override var color: String = "black"
