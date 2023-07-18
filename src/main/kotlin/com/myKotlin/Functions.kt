@@ -3,6 +3,7 @@
 package com.myKotlin
 
 import com.myjava.MyJavaFile
+import java.math.BigInteger
 
 //name of class in java when converted into bytecode
 //used for interoperability
@@ -33,6 +34,10 @@ fun main(){
     val y = 15
     val greaterValue = x.greaterVal(y)
     val greaterValueTwo = x greaterVal y //add spaces when infix function used
+
+    //tailrec function
+    println(getFibonacciNumber(1000, BigInteger("1"), BigInteger("0")))
+
 
 
 }
@@ -90,5 +95,16 @@ infix fun Int.greaterVal(other:Int):Int{
     }
     else{
         return other
+    }
+}
+
+//TailRec Functions
+//can return large numbers without running out of stack memory
+tailrec fun getFibonacciNumber(n:Int, a:BigInteger, b:BigInteger):BigInteger{
+    if(n==0){
+        return b
+    }
+    else {
+        return getFibonacciNumber(n-1,a+b, a)
     }
 }
