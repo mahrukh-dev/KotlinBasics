@@ -17,10 +17,21 @@ fun main(){
 
     program.addTwoNums(2,4){x,y -> x+y}
 
+    //in case of closure, when unit is the return type, lambda functions can be used to modify outside parameters
+    var result = 0
+    program.addTwoNumsClosure(1,2){x,y->result=x+y}
+    println(result)
+
+
+
+
 }
 
 class Program{
 
+    fun addTwoNumsClosure(a:Int, b:Int, action: (Int, Int) -> Unit ){
+        action(a,b)
+    }
     fun addTwoNums(a:Int, b:Int, action: (Int, Int) -> Int ){
         val sum = action(a,b)
         println(sum)
