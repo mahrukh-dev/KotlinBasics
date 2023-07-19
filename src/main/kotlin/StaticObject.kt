@@ -25,3 +25,4 @@ object Employee: MySuperClass(){
         println("object Emp: $str")
     }
 }
+
