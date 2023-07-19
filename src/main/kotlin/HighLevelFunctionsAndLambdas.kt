@@ -25,10 +25,27 @@ fun main(){
     //it keyword if we have only one parameter
     program.reverseAndDisplay("hello", { it.reversed() })
 
+    //with and apply keyword
+    var p2 = Program()
+
+    with(p2) {
+        name = "Mah Rukh"
+        age = 20
+    }
+
+    p2.apply {
+        name = "Arsh"
+        age = 10
+    }.addTwoNums(1,1)
+
+    println(p2.name)
+    println(p2.age)
 
 }
 
 class Program{
+    var name: String = ""
+    var age: Int = -1
 
     fun reverseAndDisplay(str: String, myFunc: (String)->String){
         var result= myFunc(str)
