@@ -22,13 +22,18 @@ fun main(){
     program.addTwoNumsClosure(1,2){x,y->result=x+y}
     println(result)
 
-
+    //it keyword if we have only one parameter
+    program.reverseAndDisplay("hello", { it.reversed() })
 
 
 }
 
 class Program{
 
+    fun reverseAndDisplay(str: String, myFunc: (String)->String){
+        var result= myFunc(str)
+        println(result)
+    }
     fun addTwoNumsClosure(a:Int, b:Int, action: (Int, Int) -> Unit ){
         action(a,b)
     }
