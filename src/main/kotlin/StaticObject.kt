@@ -16,6 +16,10 @@ object Employee: MySuperClass(){
         println("employee has been registered")
     }
 
+    init {
+        //
+    }
+
     override fun myMethod(str: String) { //act as static method
         super.myMethod(str)
         println("object Emp: $str")
