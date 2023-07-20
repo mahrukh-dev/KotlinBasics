@@ -2,6 +2,8 @@ fun main(){
     ArrayWork()
     ImmutableListWork()
     MutableListWork()
+    ImmutableMapWork()
+    MutableMapWork()
 }
 
 fun ArrayWork(){
@@ -21,6 +23,8 @@ fun ArrayWork(){
     for (index in 0..myArray.size-1){
         print(myArray[index])
     }
+
+
 }
 
 fun ImmutableListWork(){
@@ -41,6 +45,7 @@ fun MutableListWork(){
     mList.add("l2")
     mList.add("l3")
 
+
     mList.remove("l2")
     mList.add("List2")
 
@@ -52,5 +57,40 @@ fun MutableListWork(){
     println()
     for (index in 0..mList.size-1){
         print(mList[index])
+    }
+
+}
+
+fun ImmutableMapWork(){
+    //read only
+    //key-val pairs
+    //immutable, fixed size
+
+    var myMap = mapOf<Int, String>( 10 to "m1", 3 to "m2", 4 to "m3")
+
+    for(key in myMap.keys){
+        println(myMap[key]) //myMap.get(key)
+        println("element at key: $key = ${myMap.get(key)}")
+    }
+}
+
+fun MutableMapWork(){
+    //key-val pairs
+    //mutable
+
+    var myMap = HashMap<Int, String>()
+    var myMap1 = mutableMapOf<Int, String>()
+    var myMap2 = hashMapOf<Int, String>()
+
+    myMap.put(4, "h1")
+    myMap.put(10, "h2")
+    myMap.put(7, "h3")
+
+    //same functionality of both in this scenario
+    myMap.replace(4, "h5")
+    myMap.put(4, "h5")
+
+    for(key in myMap.keys){
+        println("element at key: $key = ${myMap.get(key)}")
     }
 }

@@ -1,6 +1,7 @@
 fun main(){
 }
 
+//can create object of abstract class
 abstract class PersonTwo{
 
     abstract  var name: String //never instantiate
