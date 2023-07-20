@@ -108,5 +108,5 @@ Other implementations of MutableList, like LinkedList, might perform better for 
 To summarize, MutableList is an interface representing a mutable list in Kotlin, while ArrayList is a specific implementation of that interface that uses an array as the underlying data structure. When using a MutableList, you have the flexibility to switch between different implementations based on your specific use case and performance requirements. If you know that you specifically need an array-based dynamic list, using ArrayList is a practical choice.
 
 
-AB
+![img.png](img.png)
 
