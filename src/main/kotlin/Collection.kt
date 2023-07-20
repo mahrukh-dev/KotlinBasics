@@ -94,3 +94,28 @@ fun MutableMapWork(){
         println("element at key: $key = ${myMap.get(key)}")
     }
 }
+
+fun ImmutableSetWork(){
+    //set contains unique elements
+    //immutable, read only
+    var mySet = setOf<Int>(2,4,5,21,6,8,8,8,15)
+    //cannnot modify
+
+    for(element in mySet){
+        print(element) //redundant elements are removed
+    }
+}
+fun MutableSetWork(){
+    //hash set contains uniqie elements but sequence isnt guaranteed
+    var mySet = mutableSetOf<Int>(2,4,5,21,6,8,8,8,15)
+    //sequence matters in case of mutable set
+    var mySet2 = hashSetOf<Int>(2,4,5,21,6,8,8,8,15)
+    //sequence doesnt matter incase of HashSet
+    mySet.remove(5)
+    mySet.add(16)
+
+    for(element in mySet){
+        print(element) //redundant elements are removed
+    }
+}
+
