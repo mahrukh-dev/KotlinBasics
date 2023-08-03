@@ -1,0 +1,7 @@
+class ExampleDeligate{
+
+}
+
+fun main(){
+
+}
